@@ -26,6 +26,8 @@ struct CustomListRowView: View {
                     .fontWeight(.heavy)
             }else if (rowLinkLabel != nil && rowLinkDestination != nil) {
                 Link(rowLinkLabel!, destination: URL(string: rowLinkDestination!)!)
+                    .foregroundColor(.pink)
+                    .fontWeight(.heavy)
             } else {
                 /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
             }
@@ -57,7 +59,7 @@ struct CustomListRow_Previews: PreviewProvider {
                 rowContent: "John Doe",
                 rowTintColor: .pink,
                 rowLinkLabel: "Willian Bogarin GitHub",
-                rowLinkDestination: <#T##String?#>
+                rowLinkDestination:"https://github.com/willianbogarin/Hike-SwiftUI"
             )
         }
     }
